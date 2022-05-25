@@ -2,19 +2,19 @@
 
 document.addEventListener("DOMContentLoaded", function() {
  //маска телефона
-var phoneInput = document.querySelector('.phone');
-var maskOptions = {
+let phoneInput = document.querySelector('.phone');
+let maskOptions = {
     mask: '+7(#00)000-00-00',
     lazy: false,
     definitions: {
         '#': /[1,2,3,4,5,6,9]/
       }
 } 
-var mask = new IMask(phoneInput, maskOptions);
+let mask = new IMask(phoneInput, maskOptions);
 
 // маска email
-var emailInput = document.getElementById('email');
-var maskOptions2 = {    
+let emailInput = document.getElementById('email');
+let maskOptions2 = {    
     mask:function (value) {
                 if(/^[a-z0-9_\.-]+$/.test(value))
                     return true;
